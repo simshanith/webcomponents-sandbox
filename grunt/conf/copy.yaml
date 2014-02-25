@@ -17,22 +17,39 @@ devScripts:
       src: <%= paths.src %>/scripts/main.js
       dest: <%= paths.build %>/scripts/main.js
 
+vendorScripts:
+  files:
+    -
+      expand: true
+      cwd: <%= paths.src %>/scripts/vendor/
+      src: ["**/*"]
+      dest: <%= paths.build %>/scripts/vendor/
+
 bower:
   options:
     scriptsDest: <%= paths.src %>/scripts/vendor
     htmlDest: <%= paths.src %>/markup/imports
   files:
     -
-      src: bower_components/platform/platform.js
-      dest: <%= copy.bower.options.scriptsDest %>/platform.js
+      expand: true
+      cwd: bower_components/platform/
+      src: ['platform.js*']
+      dest: <%= copy.bower.options.scriptsDest %>/
     -
-      src: bower_components/polymer/polymer.js
-      dest: <%= copy.bower.options.scriptsDest %>/polymer.js
+      expand: true
+      cwd: bower_components/polymer/
+      src: ['polymer.js*']
+      dest: <%= copy.bower.options.scriptsDest %>/
     -
-      src: bower_components/polymer/polymer.js
+      expand: true
+      cwd: bower_components/polymer/
+      src: ['polymer.js*']
+      dest: <%= copy.bower.options.htmlDest %>/
+    -
+      src: bower_components/polymer/polymer.html
       dest: <%= copy.bower.options.htmlDest %>/polymer.html
     -
-      src: bower_components/polymer/polymer.js
+      src: bower_components/polymer/polymer-body.html
       dest: <%= copy.bower.options.htmlDest %>/polymer-body.html
     -
       src: bower_components/jquery/jquery.js

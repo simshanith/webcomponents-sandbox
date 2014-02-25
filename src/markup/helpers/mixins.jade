@@ -30,3 +30,11 @@ mixin projectImage(file)
     - attributes.src = path;
     - attributes.alt = attributes.alt || 'Project image.'
     img&attributes(attributes)
+
+mixin projectImport(file)
+  - var path = file || attributes.src || null;
+  - path = projectImportUrl(path);
+  if path
+    - attributes.href = path;
+    - attributes.rel = 'import'
+    link&attributes(attributes)

@@ -9,6 +9,7 @@ module.exports = function(grunt) {
       var tasks = [
         // copied to build
         'copy:devScripts',
+        'copy:vendorScripts',
         'diffCopy:scripts',
         'clean:scripts'
       ];

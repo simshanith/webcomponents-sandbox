@@ -74,6 +74,7 @@ module.exports = function(grunt) {
   jadeLocals.projectImageUrl = urlPrefixer('_assets/images');
   jadeLocals.projectScriptUrl = urlPrefixer('_assets/scripts');
   jadeLocals.projectStyleUrl = urlPrefixer('_assets/styles');
+  jadeLocals.projectImportUrl = urlPrefixer('imports');
 
   var marked = require('marked');
 
