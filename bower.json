@@ -1,0 +1,15 @@
+{
+  "name": "webcomponents-sandbox",
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "backbone": "~1.1.0",
+    "lodash": "~2.4.1",
+    "underscore.string": "~2.3.3",
+    "json3": "~3.2.6",
+    "q": "~1.0.0",
+    "es5-shim": "~2.3.0",
+    "jquery.transit": "~0.9.9",
+    "polymer": "~0.2.0",
+    "platform": "Polymer/platform#~0.2.0"
+  }
+}

@@ -1,0 +1,24 @@
+livereload:
+  files:
+    - "<%= paths.htdocs %>/**/*"
+  options: 
+    livereload: "<%= liveReloadPort %>"
+
+styles:
+  files:
+    - "<%= paths.src %>/styles/**/*"
+  tasks:
+    - styles
+
+scripts:
+  files:
+    - "<%= paths.src %>/scripts/**/*"
+  tasks:
+    - scripts
+
+markup:
+  files:
+    - "<%= paths.src %>/markup/**/*"
+  tasks:
+    - markup
+

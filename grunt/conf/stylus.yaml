@@ -1,0 +1,14 @@
+compile:
+  options:
+    include css: true
+  files:
+    -
+      expand: true,
+      cwd: "<%= paths.src %>/styles/lib"
+      src:
+        - "**/*.styl"
+        - "!**/_*"
+        - "!**/_*/**"
+      dest: "<%= paths.build %>/styles/"
+      ext: .css
+  

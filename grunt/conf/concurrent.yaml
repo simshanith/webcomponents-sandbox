@@ -1,0 +1,4 @@
+serve:
+  tasks: ["connect:site:keepalive", "watch:livereload", "watch:markup", "watch:scripts", "watch:styles"]
+  options:
+    logConcurrentOutput: true

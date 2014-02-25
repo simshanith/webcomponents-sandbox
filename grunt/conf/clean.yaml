@@ -1,0 +1,8 @@
+build:
+  src: "<%= paths.build %>"
+scripts:
+  src: "<%= paths.build %>/scripts"
+styles:
+  src: "<%= paths.build %>/styles"
+markup:
+  src: "<%= paths.build %>/markup"

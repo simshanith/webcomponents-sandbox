@@ -1,0 +1,88 @@
+scripts:
+  files:
+    -
+      expand: true
+      cwd: <%= paths.build %>/scripts/
+      src: ["**/*"]
+      dest: <%= paths.dest %>/scripts/
+
+devScripts:
+  files:
+    -
+      expand: true
+      cwd: <%= paths.src %>/scripts/lib/
+      src: ["**/*"]
+      dest: <%= paths.build %>/scripts/lib/
+    -
+      src: <%= paths.src %>/scripts/main.js
+      dest: <%= paths.build %>/scripts/main.js
+
+bower:
+  options:
+    scriptsDest: <%= paths.src %>/scripts/vendor
+    htmlDest: <%= paths.src %>/markup/imports
+  files:
+    -
+      src: bower_components/platform/platform.js
+      dest: <%= copy.bower.options.scriptsDest %>/platform.js
+    -
+      src: bower_components/polymer/polymer.js
+      dest: <%= copy.bower.options.scriptsDest %>/polymer.js
+    -
+      src: bower_components/polymer/polymer.js
+      dest: <%= copy.bower.options.htmlDest %>/polymer.html
+    -
+      src: bower_components/polymer/polymer.js
+      dest: <%= copy.bower.options.htmlDest %>/polymer-body.html
+    -
+      src: bower_components/jquery/jquery.js
+      dest: <%= copy.bower.options.scriptsDest %>/jquery.js
+    -
+      src: bower_components/jquery/jquery.min.js
+      dest: <%= copy.bower.options.scriptsDest %>/jquery.min.js
+    -
+      src: bower_components/jquery/jquery.min.map
+      dest: <%= copy.bower.options.scriptsDest %>/jquery.min.map
+    -
+      src: bower_components/jquery.transit/jquery.transit.js
+      dest: <%= copy.bower.options.scriptsDest %>/jquery.transit.js
+    -
+      src: bower_components/jquery.transit/site/jquery.transit-0.9.9.min.js
+      dest: <%= copy.bower.options.scriptsDest %>/jquery.transit.min.js
+    -
+      src: bower_components/lodash/dist/lodash.underscore.js
+      dest: <%= copy.bower.options.scriptsDest %>/lodash.underscore.js
+    -
+      src: bower_components/lodash/dist/lodash.underscore.min.js
+      dest: <%= copy.bower.options.scriptsDest %>/lodash.underscore.min.js
+    -
+      src: bower_components/underscore.string/lib/underscore.string.js
+      dest: <%= copy.bower.options.scriptsDest %>/underscore.string.js
+    -
+      src: bower_components/underscore.string/dist/underscore.string.min.js
+      dest: <%= copy.bower.options.scriptsDest %>/underscore.string.min.js
+    -
+      src: bower_components/backbone/backbone.js
+      dest: <%= copy.bower.options.scriptsDest %>/backbone.js
+    -
+      expand: true
+      cwd: bower_components/es5-shim/
+      src: ["es5-shim.*"]
+      dest: <%= copy.bower.options.scriptsDest %>/
+    -
+      src: bower_components/json3/lib/json3.min.js
+      dest: <%= copy.bower.options.scriptsDest %>/json3.min.js
+    -
+      src: bower_components/json3/lib/json3.js
+      dest: <%= copy.bower.options.scriptsDest %>/json3.js
+    -
+      src: bower_components/q/q.js
+      dest: <%= copy.bower.options.scriptsDest %>/q.js
+
+markup:
+  files:
+    -
+      expand: true
+      cwd: <%= paths.build %>/markup/htdocs
+      src: ["**/*"]
+      dest: <%= paths.htdocs %>/

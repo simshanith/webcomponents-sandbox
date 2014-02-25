@@ -1,0 +1,7 @@
+site:
+  options:
+    keepalive: true
+    port: "<%= port %>"
+    open: "http://localhost:<%= port %>/"
+    livereload: "<%= liveReloadPort %>"
+    base: "<%= paths.htdocs %>"
