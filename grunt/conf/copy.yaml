@@ -38,19 +38,17 @@ bower:
     -
       expand: true
       cwd: bower_components/polymer/
-      src: ['polymer.js*']
-      dest: <%= copy.bower.options.scriptsDest %>/
+      src: ['polymer.js*', 'polymer*.html']
+      dest: <%= copy.bower.options.htmlDest %>/polymer/
     -
-      expand: true
-      cwd: bower_components/polymer/
-      src: ['polymer.js*']
-      dest: <%= copy.bower.options.htmlDest %>/
+      src: bower_components/polymer-jsonp/polymer-jsonp.html
+      dest: <%= copy.bower.options.htmlDest %>/polymer-jsonp/polymer-jsonp.html
     -
-      src: bower_components/polymer/polymer.html
-      dest: <%= copy.bower.options.htmlDest %>/polymer.html
+      src: bower_components/masonry/index.js
+      dest: <%= copy.bower.options.scriptsDest %>/masonry.pkgd.js
     -
-      src: bower_components/polymer/polymer-body.html
-      dest: <%= copy.bower.options.htmlDest %>/polymer-body.html
+      src: bower_components/imagesLoaded/index.js
+      dest: <%= copy.bower.options.scriptsDest %>/imagesLoaded.pkgd.js
     -
       expand: true
       cwd: bower_components/jquery/dist/

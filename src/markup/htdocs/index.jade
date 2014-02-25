@@ -1,5 +1,29 @@
 extends ../templates/main
 
 block mainContent
-  :markdown
-    # Hello World
+  #tumblr-container
+  +projectImport('collections.html')
+  +projectImport('tumblr-data.html')#tumblr-data
+
+  style.
+    #tumblr-container {
+      width: 80%;
+      padding: 10% 10%;
+    }
+    #tumblr-container>img {
+      width: 20%;
+    }
+
+  script.
+    document.addEventListener('WebComponentsReady', function() {
+      var importee = document.querySelector("#tumblr-data").import;
+      var jsonp = importee.querySelector("#tumblr-data");
+      $(jsonp).appendTo(document.querySelector('#wrapper'));
+      jsonp.addEventListener("polymer-response", 
+        function(e) {
+          var posts = e.detail.response.posts;
+          console.log(posts);
+          window.images.add(posts);
+        }
+      );
+    });

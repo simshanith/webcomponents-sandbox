@@ -10,6 +10,9 @@
     "es5-shim": "~2.3.0",
     "jquery.transit": "~0.9.9",
     "polymer": "~0.2.0",
-    "platform": "Polymer/platform#~0.2.0"
+    "platform": "Polymer/platform#~0.2.0",
+    "polymer-jsonp": "Polymer/polymer-jsonp#~0.2.0",
+    "masonry": "http://masonry.desandro.com/masonry.pkgd.js",
+    "imagesLoaded": "http://imagesloaded.desandro.com/imagesloaded.pkgd.js"
   }
 }

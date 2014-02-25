@@ -1,0 +1,29 @@
+
+<link href="/imports/backbone.html" rel="import"/>
+<link href="/imports/masonry.html" rel="import"/>
+<link href="/imports/imagesLoaded.html" rel="import"/>
+<script>
+  window.ImagesCollection = Backbone.Collection.extend({});
+  window.images = new ImagesCollection();
+  images.on('all', function(type, model) {
+    var photos = model.get('photos');
+    var $container = $('#tumblr-container');
+    var photoKey = 'photo-url-250';
+    if( !photos.length) {
+      photos = [model.get(photoKey)];
+    } else {
+      photos = _.pluck(photos, photoKey);
+    }
+    _.each(photos, function(photo) {
+      var img = document.createElement('img');
+      img.src = photo;
+      $container.append(img);
+    });
+    $container.imagesLoaded(function(){
+      $container.masonry({
+        columnWidth: 'img',
+        itemSelector: 'img'
+      });
+    });
+  });
+</script>
