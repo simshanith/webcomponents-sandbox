@@ -4,3 +4,12 @@ ol,ul{list-style:none}
 table{border-collapse:separate;border-spacing:0;vertical-align:middle}
 caption,th,td{text-align:left;font-weight:normal;vertical-align:middle}
 a img{border:none}
+body{min-width:100%;background-color:#222;color:#ccc}
+#wrapper{max-width:960px;margin:0 auto}
+header{font-size:200%;padding:10% 0 0;}
+header h1,header h2,header h3{line-height:150%;font-family:Baskerville,serif}
+header h1{font-size:150%}
+header h2{font-size:120%}
+header a{color:#f0f8ff;text-decoration:none;}
+header a:hover,header a:active{text-decoration:underline}
+header a:visited{color:#f0f8ff}
