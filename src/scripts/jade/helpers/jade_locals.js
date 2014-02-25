@@ -55,6 +55,26 @@ module.exports = function(grunt) {
   jadeLocals.trimTrailingSlash = trimTrailingSlash;
   jadeLocals.trimSlashes = trimSlashes;
 
+  function ensureTrailingSlash(path) {
+    if( _.isString(path) ) {
+      return trimTrailingSlash(path) + '/';
+    }
+  }
+
+  function urlPrefixer(prefix) {
+    return function(url) {
+      var baseUrl = ensureTrailingSlash(grunt.config('paths.baseUrl'));
+      if( _.isString(url) ) {
+        return ensureTrailingSlash(baseUrl+prefix) + trimLeadingSlash(url);
+      }
+    };
+  }
+
+  jadeLocals.projectUrl = urlPrefixer('');
+  jadeLocals.projectImageUrl = urlPrefixer('_assets/images');
+  jadeLocals.projectScriptUrl = urlPrefixer('_assets/scripts');
+  jadeLocals.projectStyleUrl = urlPrefixer('_assets/styles');
+
   var marked = require('marked');
 
   function includeMarkdown(path) {
@@ -66,7 +86,7 @@ module.exports = function(grunt) {
 
   function getJSONpath(path) {
     var paths = grunt.config('paths');
-    return jsonPath = paths.src+'/markup/include/scripts/'+path+'.json';
+    return jsonPath = paths.src+'/markup/includes/scripts/'+path+'.json';
   }
 
   function includeJSON(path) {

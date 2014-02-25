@@ -16,5 +16,7 @@ module.exports = function(grunt) {
   // temporary build directory
   paths.build   = 'build';
 
+  paths.baseUrl = '/';
+
   return paths;
 };

@@ -87,6 +87,14 @@ markup:
       src: ["**/*"]
       dest: <%= paths.htdocs %>/
 
+imports:
+  files:
+    -
+      expand: true
+      cwd: <%= paths.src %>/markup/imports
+      src: ["**/*"]
+      dest: <%= paths.build %>/markup/htdocs/imports/vendor/
+
 styles:
   files:
     -

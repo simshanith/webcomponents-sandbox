@@ -1,0 +1,32 @@
+//- http://stackoverflow.com/questions/10709511/express-jade-node-js-variable-is-not-defined-error-when-checking-for-exist
+- function pagevar(key, value) { var undef; return (value===undef) ? locals[key] || null : locals[key] = value; }
+
+mixin projectLink(url)
+  - var path = url || attributes.href || null;
+  - path = projectUrl(path);
+  - attributes.href = path;
+  a&attributes(attributes)
+    block
+
+mixin projectStyle(file)
+  - var path = file || attributes.href || null;
+  - path = projectStyleUrl(path);
+  if path
+    - attributes.href = path;
+    - attributes.rel = 'stylesheet'
+    link&attributes(attributes)
+
+mixin projectScript(file)
+  - var path = file || attributes.src || null;
+  - path = projectScriptUrl(path);
+  if path
+    - attributes.src = path;
+    script&attributes(attributes)
+
+mixin projectImage(file)
+  - var path = file || attributes.src || null;
+  - path = projectImageUrl(path);
+  if path
+    - attributes.src = path;
+    - attributes.alt = attributes.alt || 'Project image.'
+    img&attributes(attributes)

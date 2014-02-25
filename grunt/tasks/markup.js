@@ -9,6 +9,7 @@ module.exports = function(grunt) {
       var tasks = [
         // copied to build
         'jade:htdocs',
+        'copy:imports',
         'diffCopy:markup',
         'clean:markup'
       ];
