@@ -8,7 +8,7 @@ module.exports = function(grunt) {
   // relative paths from project directory
 
   // where resources live
-  paths.htdocs  = 'htdocs';
+  paths.htdocs  = '.';
   // input
   paths.src     = 'src';
   // output
@@ -16,7 +16,7 @@ module.exports = function(grunt) {
   // temporary build directory
   paths.build   = 'build';
 
-  paths.baseUrl = '/';
+  paths.baseUrl = '/webcomponents-sandbox/';
 
   return paths;
 };
