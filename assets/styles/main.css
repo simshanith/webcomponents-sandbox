@@ -13,3 +13,4 @@ header h2{font-size:120%}
 header a{color:#f0f8ff;text-decoration:none;}
 header a:hover,header a:active{text-decoration:underline}
 header a:visited{color:#f0f8ff}
+.github-ribbon{display:block;z-index:99;position:fixed;top:0;right:0;border:0}
