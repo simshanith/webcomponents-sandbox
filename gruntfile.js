@@ -57,7 +57,7 @@ module.exports = function(grunt) {
   // default behavior.
   grunt.registerTask('default', 'Grunt.', function() {
     grunt.log.ok(grunt.config('pkg.name'));
-    grunt.task.run(['symlink', 'bower', 'main', 'serve']);
+    grunt.task.run(['main', 'serve']);
   });
 
 

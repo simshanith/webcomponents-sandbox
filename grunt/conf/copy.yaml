@@ -86,3 +86,11 @@ markup:
       cwd: <%= paths.build %>/markup/htdocs
       src: ["**/*"]
       dest: <%= paths.htdocs %>/
+
+styles:
+  files:
+    -
+      expand: true
+      cwd: <%= paths.build %>/styles/
+      src: ["**/*"]
+      dest: <%= paths.dest %>/styles/

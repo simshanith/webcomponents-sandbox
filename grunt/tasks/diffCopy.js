@@ -10,8 +10,6 @@ module.exports = function(grunt) {
 
     var srcDestPairs = conf && grunt.task.normalizeMultiTaskFiles(conf);
 
-    grunt.log.writelns(util.inspect(srcDestPairs));
-
     function compare(src, dest) {
       var newer, older;
       newer = grunt.file.read(src);

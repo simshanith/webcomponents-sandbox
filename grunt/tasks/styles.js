@@ -7,6 +7,9 @@ module.exports = function(grunt) {
     function() {
       
       var tasks = [
+        'stylus:compile',
+        'diffCopy:styles',
+        'clean:styles'
       ];
 
       grunt.task.run(tasks);
