@@ -52,14 +52,10 @@ bower:
       src: bower_components/polymer/polymer-body.html
       dest: <%= copy.bower.options.htmlDest %>/polymer-body.html
     -
-      src: bower_components/jquery/jquery.js
-      dest: <%= copy.bower.options.scriptsDest %>/jquery.js
-    -
-      src: bower_components/jquery/jquery.min.js
-      dest: <%= copy.bower.options.scriptsDest %>/jquery.min.js
-    -
-      src: bower_components/jquery/jquery.min.map
-      dest: <%= copy.bower.options.scriptsDest %>/jquery.min.map
+      expand: true
+      cwd: bower_components/jquery/dist/
+      src: ["jquery*"]
+      dest: <%= copy.bower.options.scriptsDest %>/
     -
       src: bower_components/jquery.transit/jquery.transit.js
       dest: <%= copy.bower.options.scriptsDest %>/jquery.transit.js
