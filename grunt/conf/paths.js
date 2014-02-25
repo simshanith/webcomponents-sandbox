@@ -12,7 +12,7 @@ module.exports = function(grunt) {
   // input
   paths.src     = 'src';
   // output
-  paths.dest    = path.join(paths.htdocs, '_assets');
+  paths.dest    = path.join(paths.htdocs, 'assets');
   // temporary build directory
   paths.build   = 'build';
 

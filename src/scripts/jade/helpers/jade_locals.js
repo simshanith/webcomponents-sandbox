@@ -63,7 +63,8 @@ module.exports = function(grunt) {
 
   function urlPrefixer(prefix) {
     return function(url) {
-      var baseUrl = ensureTrailingSlash(grunt.config('paths.baseUrl'));
+      var paths = grunt.config('paths');
+      var baseUrl = ensureTrailingSlash(paths.baseUrl);
       if( _.isString(url) ) {
         return ensureTrailingSlash(baseUrl+prefix) + trimLeadingSlash(url);
       }
@@ -71,9 +72,9 @@ module.exports = function(grunt) {
   }
 
   jadeLocals.projectUrl = urlPrefixer('');
-  jadeLocals.projectImageUrl = urlPrefixer('_assets/images');
-  jadeLocals.projectScriptUrl = urlPrefixer('_assets/scripts');
-  jadeLocals.projectStyleUrl = urlPrefixer('_assets/styles');
+  jadeLocals.projectImageUrl = urlPrefixer('assets/images');
+  jadeLocals.projectScriptUrl = urlPrefixer('assets/scripts');
+  jadeLocals.projectStyleUrl = urlPrefixer('assets/styles');
   jadeLocals.projectImportUrl = urlPrefixer('imports');
 
   var marked = require('marked');

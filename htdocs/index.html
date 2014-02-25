@@ -10,16 +10,16 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="MobileOptimized" content="width">
     <meta name="format-detection" content="telephone=no">
-    <link href="/_assets/styles/main.css" rel="stylesheet"/>
+    <link href="/assets/styles/main.css" rel="stylesheet"/>
     <link rel="shortcut icon" href="/favicon.ico">
-    <script src="/_assets/scripts/vendor/platform.js"></script>
+    <script src="/assets/scripts/vendor/platform.js"></script>
     <link href="/imports/vendor/polymer/polymer.html" rel="import"/>
   </head>
   <body id="mainTemplate">
     <div id="wrapper">
       <header id="header"><h1 id="web-components">Web Components</h1>
 <h2 id="-moving-the-web-forward-">...moving the Web forward.</h2>
-
+<a href="/overview.html">Overview</a>
       </header>
       <section id="mainContent">
         <div id="tumblr-container"></div>
@@ -39,7 +39,6 @@
           document.addEventListener('WebComponentsReady', function() {
             var importee = document.querySelector("#tumblr-data").import;
             var jsonp = importee.querySelector("#tumblr-data");
-            $(jsonp).appendTo(document.querySelector('#wrapper'));
             jsonp.addEventListener("polymer-response", 
               function(e) {
                 var posts = e.detail.response.posts;
@@ -47,6 +46,7 @@
                 window.images.add(posts);
               }
             );
+            $(jsonp).appendTo(document.querySelector('#wrapper'));
           });
         </script>
       </section>
@@ -54,6 +54,5 @@
 
       </footer>
     </div>
-    <script src="/_assets/scripts/main.js"></script>
   </body>
 </html>

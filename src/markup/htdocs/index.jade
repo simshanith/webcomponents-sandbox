@@ -18,7 +18,6 @@ block mainContent
     document.addEventListener('WebComponentsReady', function() {
       var importee = document.querySelector("#tumblr-data").import;
       var jsonp = importee.querySelector("#tumblr-data");
-      $(jsonp).appendTo(document.querySelector('#wrapper'));
       jsonp.addEventListener("polymer-response", 
         function(e) {
           var posts = e.detail.response.posts;
@@ -26,4 +25,5 @@ block mainContent
           window.images.add(posts);
         }
       );
+      $(jsonp).appendTo(document.querySelector('#wrapper'));
     });
