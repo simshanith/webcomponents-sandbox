@@ -20,6 +20,8 @@
       <header id="header"><h1 id="web-components">Web Components</h1>
 <h2 id="-moving-the-web-forward-">...moving the Web forward.</h2>
 
+        <h3><a href="/webcomponents-sandbox/overview.html">Overview</a>
+        </h3>
       </header>
       <section id="mainContent">
         <div id="tumblr-container"></div>
@@ -39,7 +41,6 @@
           document.addEventListener('WebComponentsReady', function() {
             var importee = document.querySelector("#tumblr-data").import;
             var jsonp = importee.querySelector("#tumblr-data");
-            $(jsonp).appendTo(document.querySelector('#wrapper'));
             jsonp.addEventListener("polymer-response", 
               function(e) {
                 var posts = e.detail.response.posts;
@@ -47,6 +48,7 @@
                 window.images.add(posts);
               }
             );
+            $(jsonp).appendTo(document.querySelector('#wrapper'));
           });
         </script>
       </section>

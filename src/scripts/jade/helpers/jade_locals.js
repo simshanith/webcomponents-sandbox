@@ -63,7 +63,8 @@ module.exports = function(grunt) {
 
   function urlPrefixer(prefix) {
     return function(url) {
-      var baseUrl = ensureTrailingSlash(grunt.config('paths.baseUrl'));
+      var paths = grunt.config('paths');
+      var baseUrl = ensureTrailingSlash(paths.baseUrl);
       if( _.isString(url) ) {
         return ensureTrailingSlash(baseUrl+prefix) + trimLeadingSlash(url);
       }

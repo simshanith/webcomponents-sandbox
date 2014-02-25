@@ -1,3 +1,30 @@
 @import _globals
 
 global-reset()
+
+body
+  min-width 100%
+  background-color bgColor
+  color fgColor
+
+#wrapper
+  max-width 960px
+  margin 0 auto
+
+header
+  font-size 200%
+  padding 10% 0 0
+  h1, h2, h3
+    line-height 150%
+    font-family Baskerville, serif
+  h1
+    font-size 150%
+  h2
+    font-size 120%
+  a
+    color aliceblue
+    text-decoration none
+    &:hover, &:active
+      text-decoration underline
+    &:visited
+      color aliceblue
