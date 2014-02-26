@@ -34,7 +34,7 @@ module.exports = function(grunt) {
         //ext: '.html',
         // manually replace with rename.
         rename: function(dest, src) {
-          return path.join(dest, src.replace(/.jade$/, '.html'));
+          return path.join(dest, src.replace(/\.jade$/, '.html'));
         }
       }]
     }
