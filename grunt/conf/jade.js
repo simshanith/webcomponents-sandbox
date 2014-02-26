@@ -30,7 +30,12 @@ module.exports = function(grunt) {
         cwd: '<%= paths.src %>/markup/htdocs/',
         src: '**/*.jade',
         dest: '<%= paths.build %>/markup/htdocs/',
-        ext: '.html'
+        // ext grabs everything after first period. bad Grunt!
+        //ext: '.html',
+        // manually replace with rename.
+        rename: function(dest, src) {
+          return path.join(dest, src.replace(/.jade$/, '.html'));
+        }
       }]
     }
   };
