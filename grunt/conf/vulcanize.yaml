@@ -1,0 +1,15 @@
+# https://github.com/Polymer/grunt-vulcanize
+app:
+  options:
+    csp: false
+    inline: false
+    strip: false
+    excludes:
+      imports: ['tumblr-data.html']
+  files:
+    -
+      expand: true
+      cwd: '<%= paths.htdocs %>/'
+      src: 'index.html'
+      dest: '<%= paths.build %>/markup/htdocs/'
+      ext: '.pkgd.html'

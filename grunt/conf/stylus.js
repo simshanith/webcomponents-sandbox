@@ -7,6 +7,8 @@ module.exports = function(grunt) {
   var _ = grunt.util._;
 
   // define stylus plugins.
+  // Hat tip to Artem Sapegin.
+  // http://blog.sapegin.me/all/css-workflow
 
   // https://github.com/jenius/autoprefixer-stylus
   // https://github.com/ai/autoprefixer
@@ -51,7 +53,8 @@ module.exports = function(grunt) {
         //ext: '.css',
         // manually replace with rename.
         rename: function(dest, src) {
-          return path.join(dest, src.replace(/\.styl$/, '.css'));
+          var stylExtRegex = /\.styl$/;
+          return path.join(dest, src.replace(stylExtRegex, '.css'));
         }
       }]
     }
