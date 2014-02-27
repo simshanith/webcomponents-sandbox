@@ -29,7 +29,11 @@ module.exports = function(grunt) {
   return {
     compile: {
       options: {
+        // @import will inline include the .css,
+        // instead outputting @import CSS literal
         'include css': true,
+        // output comments with source line numbers
+        linenos: (build === 'dev'),
         define: {
           build: build,
         },
