@@ -18,6 +18,8 @@
     "lodash": "~2.4.1",
     "underscore.string": "~2.3.3",
     "marked": "~0.3.1",
-    "grunt-contrib-stylus": "~0.13.0"
+    "grunt-contrib-stylus": "~0.13.0",
+    "autoprefixer-stylus": "0.0.4",
+    "csso-stylus": "0.0.3"
   }
 }
