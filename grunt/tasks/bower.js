@@ -8,8 +8,9 @@ module.exports = function(grunt) {
 
     var exec = require('child_process').exec;
     var cb = this.async();
+
+    grunt.log.ok('Running `bower install`...');
     exec('bower install', {cwd: process.cwd()}, function(err, stdout, stderr) {
-        grunt.log.ok('Running `bower install`...');
         grunt.log.writelns(stdout);
         //grunt.log.errorlns(stderr);
         cb();

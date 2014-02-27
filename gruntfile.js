@@ -32,6 +32,8 @@ module.exports = function(grunt) {
               grunt.option('build') ||
               'prod';
 
+  grunt.config('build', build);
+
   // http://firstandthird.github.io/load-grunt-config/
   require('load-grunt-config')(grunt, {
     // point to our directory
@@ -39,7 +41,7 @@ module.exports = function(grunt) {
     // other initialization options here.
     config: {
       pkg: grunt.file.readJSON('package.json'),
-      build: build,
+      //build: build,
       path: path,
       env: process.env,
       port: port,
