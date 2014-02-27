@@ -20,6 +20,7 @@
     "marked": "~0.3.1",
     "grunt-contrib-stylus": "~0.13.0",
     "autoprefixer-stylus": "0.0.4",
-    "csso-stylus": "0.0.3"
+    "csso-stylus": "0.0.3",
+    "grunt-vulcanize": "~0.1.2"
   }
 }

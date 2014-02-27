@@ -28,6 +28,13 @@ module.exports = function(grunt) {
                         process.env.LIVERELOAD_PORT     ||
                         35729;
 
+  var portOffset  = grunt.option('port-offset') ||
+                    process.env.PORT_OFFSET ||
+                    0;
+
+  port += portOffset;
+  liveReloadPort += portOffset;
+
   var build = grunt.option('dev') && 'dev' ||
               grunt.option('build') ||
               'prod';
