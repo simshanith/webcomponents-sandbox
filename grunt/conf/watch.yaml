@@ -1,3 +1,5 @@
+options:
+    forever: false
 livereload:
   files:
     - "<%= paths.htdocs %>/**/*"
@@ -22,3 +24,10 @@ markup:
   tasks:
     - markup
 
+gitBranchChange:
+  options:
+    nospawn: true
+  files:
+    - ".gitbranchchange"
+  tasks:
+    - "git:checkout"
