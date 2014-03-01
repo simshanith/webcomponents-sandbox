@@ -5,3 +5,13 @@ helpers:
 includes:
   src: "<%= paths.src %>/scripts/jade/includes/"
   dest: "<%= paths.src %>/markup/includes/scripts"
+
+gitHooks:
+  options:
+    overwrite: true
+  files:
+    -
+      expand: true
+      cwd: "hooks/"
+      src: "*"
+      dest: ".git/hooks/"

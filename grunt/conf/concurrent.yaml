@@ -1,4 +1,10 @@
 serve:
-  tasks: ["connect:site:keepalive", "watch:livereload", "watch:markup", "watch:scripts", "watch:styles"]
+  tasks: 
+    - "connect:site:keepalive"
+    - "watch:livereload"
+    - "watch:markup"
+    - "watch:scripts"
+    - "watch:styles"
+    - "watch:gitBranchChange"
   options:
     logConcurrentOutput: true

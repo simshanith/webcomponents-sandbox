@@ -1,0 +1,22 @@
+{
+  "folders":
+  [
+    {
+      "path": ".",
+      "folder_exclude_patterns": [
+        "node_modules",
+        "build",
+        "bower_components"]
+    }
+  ],
+  "settings":
+  {
+    // indentation
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true,
+    // breaks some jade hacks (whitespace significant)
+    "trim_trailing_white_space_on_save": false,
+    // ensure line endings is linux style (even when on Windows)
+    "default_line_ending": "LF"
+  }
+}
