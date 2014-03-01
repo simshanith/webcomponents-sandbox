@@ -3,4 +3,4 @@
 # Start from the repository root.
 cd ./$(git rev-parse --show-cdup)
 
-touch .gitbranchchange
+touch .git/hooks/post-checkout
