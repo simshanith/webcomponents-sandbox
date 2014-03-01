@@ -27,7 +27,7 @@ markup:
 gitBranchChange:
   options:
     nospawn: true
-  files:
-    - ".gitbranchchange"
+  files: 
+    - "./.gitbranchchange"
   tasks:
     - "git:checkout"
