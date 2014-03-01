@@ -21,9 +21,6 @@ bower_components/
 build/
 #dist/
 
-## touched to trigger grunt watch
-.gitbranchchange
-
 ### https://raw.github.com/github/gitignore/master/Global/SublimeText.gitignore
 
 # workspace files are user-specific
