@@ -6,6 +6,8 @@ module.exports = function(grunt) {
   var build = grunt.config('build');
   var _ = grunt.util._;
 
+
+  var isDev = (build === 'dev');
   // define stylus plugins.
   // Hat tip to Artem Sapegin.
   // http://blog.sapegin.me/all/css-workflow
@@ -19,7 +21,7 @@ module.exports = function(grunt) {
   // https://github.com/sapegin/csso-stylus
   // http://css.github.io/csso/
   function csso() {
-    if( build !== 'dev') {
+    if( !isDev ) {
       return require('csso-stylus')({restructure: true});
     } else {
       return _.identity;
@@ -33,7 +35,7 @@ module.exports = function(grunt) {
         // instead outputting @import CSS literal
         'include css': true,
         // output comments with source line numbers
-        linenos: (build === 'dev'),
+        linenos: isDev,
         define: {
           build: build,
         },
