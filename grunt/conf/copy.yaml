@@ -38,7 +38,7 @@ bower:
     -
       expand: true
       cwd: bower_components/polymer/
-      src: ['polymer.js*', 'polymer*.html']
+      src: ['polymer.js*', '*.html']
       dest: <%= copy.bower.options.htmlDest %>/polymer/
     -
       src: bower_components/polymer-jsonp/polymer-jsonp.html

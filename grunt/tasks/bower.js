@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
 
   grunt.registerTask('bower', 'Copy files installed to `bower_components` to `src` `vendor` directories.', function() {
-    grunt.task.run(['bower:install', 'copy:bower']);
+    grunt.task.run(['bower:install', 'diffCopy:bower']);
   });
 
   grunt.registerTask('bower:install', 'Install Bower components reading `bower.json`.', function() {
