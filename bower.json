@@ -1,18 +1,21 @@
 {
   "name": "webcomponents-sandbox",
   "dependencies": {
-    "jquery": "~2.1.0",
-    "backbone": "~1.1.0",
+    "jquery": "~2.1.1",
+    "backbone": "~1.1.2",
     "lodash": "~2.4.1",
     "underscore.string": "~2.3.3",
-    "json3": "~3.2.6",
-    "q": "~1.0.0",
-    "es5-shim": "~2.3.0",
-    "jquery.transit": "~0.9.9",
-    "polymer": "~0.2.0",
-    "platform": "Polymer/platform#~0.2.0",
-    "polymer-jsonp": "Polymer/polymer-jsonp#~0.2.0",
+    "json3": "~3.3.2",
+    "q": "~1.0.1",
+    "es5-shim": "~4.0.3",
+    "jquery.transit": "~0.9.12",
+    "polymer": "~0.4.0",
+    "platform": "Polymer/platform#~0.4.0",
+    "polymer-jsonp": "PolymerLabs/polymer-jsonp#~0.3.0",
     "masonry": "http://masonry.desandro.com/masonry.pkgd.js",
     "imagesLoaded": "http://imagesloaded.desandro.com/imagesloaded.pkgd.js"
+  },
+  "resolutions": {
+    "polymer": "~0.4.0"
   }
 }

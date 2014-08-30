@@ -58,9 +58,6 @@ bower:
       src: bower_components/jquery.transit/jquery.transit.js
       dest: <%= copy.bower.options.scriptsDest %>/jquery.transit.js
     -
-      src: bower_components/jquery.transit/site/jquery.transit-0.9.9.min.js
-      dest: <%= copy.bower.options.scriptsDest %>/jquery.transit.min.js
-    -
       src: bower_components/lodash/dist/lodash.underscore.js
       dest: <%= copy.bower.options.scriptsDest %>/lodash.underscore.js
     -

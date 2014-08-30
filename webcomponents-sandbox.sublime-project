@@ -5,8 +5,9 @@
       "path": ".",
       "folder_exclude_patterns": [
         "node_modules",
-        "build",
-        "bower_components"]
+        "build"
+        //,"bower_components"
+      ]
     }
   ],
   "settings":
