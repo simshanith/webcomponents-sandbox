@@ -32,12 +32,16 @@ options:
 
 serve:
   bsFiles:
-    #src: "<%= paths.dest %>/**/*"
-    src: "<%= paths.htdocs %>/**/*"
+    src:
+      - "<%= paths.dest %>/**/*"
+      - "<%= paths.htdocs %>/*.html"
+      - "<%= paths.htdocs %>/imports/**/*"
+
   options:
     server:
       baseDir:
-        - "<%= paths.htdocs %>"
+        #- "<%= paths.htdocs %>"
+        - ".."
       index: index.html
       directory: false
 
