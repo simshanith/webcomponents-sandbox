@@ -1,0 +1,44 @@
+options:
+  # notify inserts some weird styles.
+  notify: false
+
+  # port definable in environment variable or cmd line opt
+  # default 8000
+  port: "<%= port %>"
+
+  # valid options: debug info silent
+  logLevel: debug
+
+  # disable ghostMode interaction syncs.
+  # renable manually for a shared session across devices by commenting out.
+  ghostMode: false
+
+  # run watchers after launching.
+  # if using with concurrent, false.
+  # analogous to keepalive grunt connect flag, but the reverse.
+  watchTask: false
+
+  # xip.io custom DNS resolver. nifty, but yet to find good use case.
+  #xip: true
+  xip: false
+
+  # localtunnel.me port forwarding. good built-in implementation.
+  # kills task after inactivity; recommend enabling for use session then disabling.
+  tunnel: false
+
+serve:
+  bsFiles:
+    #src: "<%= paths.dest %>/**/*"
+    src: "<%= paths.htdocs %>/**/*"
+  options:
+    server:
+      baseDir:
+        - "<%= paths.htdocs %>"
+      index: index.html
+      directory: false
+
+    # You can override the above here.
+    #port: "<%= port %>"
+    #tunnel: true
+    #logLevel: debug
+    #ghostMode: false
