@@ -16,6 +16,6 @@
     "imagesLoaded": "http://imagesloaded.desandro.com/imagesloaded.pkgd.js"
   },
   "resolutions": {
-    "polymer": "~0.4.0"
+    "polymer": "~0.4.1"
   }
 }
