@@ -6,6 +6,10 @@ options:
   # default 8000
   port: "<%= port %>"
 
+  open: true
+
+  startPath: "<%= paths.baseUrl %>"
+
   # valid options: debug info silent
   logLevel: debug
 
