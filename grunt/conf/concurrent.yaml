@@ -1,10 +1,10 @@
 serve:
   tasks: 
-    - "connect:site:keepalive"
-    - "watch:livereload"
+    - "browserSync:serve"
     - "watch:markup"
     - "watch:scripts"
     - "watch:styles"
     - "watch:gitBranchChange"
   options:
     logConcurrentOutput: true
+    limit: 5

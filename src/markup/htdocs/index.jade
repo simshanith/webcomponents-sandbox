@@ -15,15 +15,16 @@ block mainContent
     }
 
   script.
-    document.addEventListener('WebComponentsReady', function() {
+    function kickItOff() {
       var importee = document.querySelector("#tumblr-data").import;
       var jsonp = importee.querySelector("#tumblr-data");
       jsonp.addEventListener("polymer-response", 
-        function(e) {
+        function (e) {
           var posts = e.detail.response.posts;
           console.log(posts);
           window.images.add(posts);
         }
       );
-      $(jsonp).appendTo(document.querySelector('#wrapper'));
-    });
+      jsonp.go();
+    }
+    window.addEventListener('polymer-ready', kickItOff);
