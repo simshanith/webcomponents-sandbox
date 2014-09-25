@@ -7,6 +7,7 @@
   window.images = new ImagesCollection();
   images.on('all', function(type, model) {
     var photos = model.get('photos');
+    var url = model.get('url');
     var $container = $('#tumblr-container');
     var photoKey = 'photo-url-250';
     if( !photos.length) {
@@ -17,12 +18,17 @@
     _.each(photos, function(photo) {
       var img = document.createElement('img');
       img.src = photo;
-      $container.append(img);
+      var link = document.createElement('a');
+      link.href = url;
+      link.target = '_blank';
+      $(link).append(img);
+      $container.append(link);
+      //$container.append(img);
     });
     $container.imagesLoaded(function(){
       $container.masonry({
-        columnWidth: 'img',
-        itemSelector: 'img'
+        columnWidth: 'a',
+        itemSelector: 'a'
       });
     });
   });
