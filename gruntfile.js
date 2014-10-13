@@ -56,12 +56,14 @@ module.exports = function(grunt) {
     },
     // grunt.initConfig
     init: true,
-    // https://github.com/sindresorhus/load-grunt-tasks
-    loadGruntTasks: true
+    jitGrunt: {
+      // https://github.com/shootaroo/jit-grunt#static-mappings
+      staticMappings: {
+        diffCopy: 'grunt-diff-copy'
+      },
+      loadTasks: 'grunt/tasks'
+    }
   });
-
-  // custom tasks can be defined here.
-  grunt.loadTasks('grunt/tasks');
 
   // default behavior.
   grunt.registerTask('default', 'Grunt.', function() {
